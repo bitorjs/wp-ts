@@ -8,7 +8,7 @@ const cwd = process.cwd();
 // https://www.cnblogs.com/skylor/p/7008756.html 【webpack整理】
 module.exports = {
   mode: 'development', // development || production or webpack --mode developmen
-  entry: './index.ts',
+  entry: './src/main.ts',
   context: cwd,
   output: {
     filename: 'ddd.js',
