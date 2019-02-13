@@ -1,11 +1,11 @@
-// import * as DDD from './index';
+import * as DDD from './index';
 
-// console.log(DDD)
+console.log(DDD)
 
 
-// const xming = new DDD.Teacher("", 4)
+const xming = new DDD.Teacher("", 4)
 
-// console.log(xming)
+console.log(xming, new DDD.Ano().method)
 
 // xming.address.g = 'hh'; // error
 // console.log(xming._age);

@@ -83,12 +83,22 @@ export class Teacher extends Person {
   }
 }
 
+function f() {
+  console.log("f(): evaluated");
+  return function (target, propertyKey: string, descriptor: PropertyDescriptor) {
+    console.log("f(): called");
+  }
+}
 
-// interface A {
-//   new(s: number);
-// }
-// class demo implements A {
-//   constructor(fs: string) {
+function g() {
+  console.log("g(): evaluated");
+  return function (target, propertyKey: string, descriptor: PropertyDescriptor) {
+    console.log("g(): called");
+  }
+}
 
-//   }
-// }
+export class Ano {
+  @f()
+  @g()
+  method() { }
+}
