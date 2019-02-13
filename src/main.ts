@@ -11,6 +11,8 @@ DDD.handlePromiseF().then((res) => {
   console.log(res)
 })
 
+DDD.handlePromiseM(DDD.handlePromise);
+
 // xming.address.g = 'hh'; // error
 // console.log(xming._age);
 

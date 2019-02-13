@@ -115,6 +115,10 @@ export async function handlePromiseF(): Promise<number> {
   return func();
 }
 
-// handlePromise().then((res) => {
-//   console.log(res)
-// })
+export async function handlePromiseM(callback: () => Promise<number>): Promise<void> {
+
+  return handlePromise().then((res) => {
+    console.log(res)
+  })
+}
+
