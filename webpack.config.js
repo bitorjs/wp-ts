@@ -8,7 +8,7 @@ const cwd = process.cwd();
 // https://www.cnblogs.com/skylor/p/7008756.html 【webpack整理】
 module.exports = {
   mode: 'development', // development || production or webpack --mode developmen
-  entry: './index.js',
+  entry: './index.ts',
   context: cwd,
   output: {
     filename: 'ddd.js',
@@ -48,7 +48,7 @@ module.exports = {
     contentBase: path.join(process.cwd(), "./"),
     open: true,
     host: '0.0.0.0',
-    port: 9091,
+    port: 9081,
     inline: true,
     hot: true,
     compress: false
