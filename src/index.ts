@@ -3,7 +3,7 @@
 // 数据类型
 // 基础类型 null|undefined|number|string|boolean|any|array
 // 对象类型 Number|String|Boolean|Any|Array
-// 其它对象： 
+// 其它对象： Date | Error | RegExp
 // 数组：相同数据对象合并类型 Array<number>|Array<string>|Array<boolean>|Array<any>等
 // 元组：不同数据对象合并类型 [string,number,...]
 // 类型替代： type | as   如 type S = string;

@@ -1,8 +1,15 @@
-export const parse = urlParse;
-export const resolve = urlResolve;
-export const resolveObject = urlResolveObject;
-export const format = urlFormat;
+// export const parse = urlParse;
+// export const resolve = urlResolve;
+// export const resolveObject = urlResolveObject;
+// export const format = urlFormat;
 
+export {
+  urlParse as parse,
+  urlResolve as resolve,
+  urlResolveObject as resolveObject,
+  urlFormat as format,
+  Url
+};
 
 const util = {
   isString: function (arg) {
@@ -101,7 +108,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
   },
   querystring = require('querystring');
 
-export class Url {
+class Url {
   protocol: any = null;
   slashes: any = null;
   auth: any = null;
