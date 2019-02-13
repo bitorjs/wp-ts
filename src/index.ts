@@ -102,3 +102,19 @@ export class Ano {
   @g()
   method() { }
 }
+
+
+export async function handlePromise(): Promise<number> {
+  return 1;
+}
+
+async function func(): Promise<number> {
+  return handlePromise();
+}
+export async function handlePromiseF(): Promise<number> {
+  return func();
+}
+
+// handlePromise().then((res) => {
+//   console.log(res)
+// })

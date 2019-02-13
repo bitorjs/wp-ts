@@ -7,6 +7,10 @@ const xming = new DDD.Teacher("", 4)
 
 console.log(xming, new DDD.Ano().method)
 
+DDD.handlePromiseF().then((res) => {
+  console.log(res)
+})
+
 // xming.address.g = 'hh'; // error
 // console.log(xming._age);
 
