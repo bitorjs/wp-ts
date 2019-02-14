@@ -3,7 +3,7 @@
 // 数据类型
 // 基础类型 null|undefined|number|string|boolean|any|array
 // 对象类型 Number|String|Boolean|Any|Array
-// 其它对象： Date | Error | RegExp
+// 其它对象： Date | Error | RegExp | Promise<string> | Promise<number> ...
 // 数组：相同数据对象合并类型 Array<number>|Array<string>|Array<boolean>|Array<any>等
 // 元组：不同数据对象合并类型 [string,number,...]
 // 类型替代： type | as   如 type S = string;
@@ -16,7 +16,8 @@ interface Address {
   readonly g: string,  // readonly 定义只读属性
   sheng: string,
   city: string,
-  xian?: string // 可选填参数
+  xian?: string, // 可选填参数
+  pos?: () => string
 }
 
 // 字段不限 结构体
@@ -52,7 +53,8 @@ abstract class Person {
   constructor(__name: string = 'my name', __age: number = -1, public address: Address = {
     g: '中国',
     sheng: '',
-    city: ''
+    city: '',
+    pos: () => { return '1' }
   }, public info: Info = {
     a: 'test'
   }) {
@@ -122,3 +124,9 @@ export async function handlePromiseM(callback: () => Promise<number>): Promise<v
   })
 }
 
+export function isPromise(p: string | Promise<string>): p is Promise<string> { //用来判断是否是promise
+  return (<Promise<string>>p).then !== undefined;
+}
+
+
+console.log(process.argv)

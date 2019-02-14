@@ -1,5 +1,7 @@
 import * as DDD from './index';
+import * as Url from 'url';
 
+console.log(process.argv)
 console.log(DDD)
 
 
@@ -12,6 +14,8 @@ DDD.handlePromiseF().then((res) => {
 })
 
 DDD.handlePromiseM(DDD.handlePromise);
+
+console.log(DDD.isPromise("s"))
 
 // xming.address.g = 'hh'; // error
 // console.log(xming._age);
@@ -39,8 +43,8 @@ import * as url from './url';
 
 console.log(url)
 
-console.log(url.parse('https://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash'))
-  ;
+console.log(url.parse('https://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash'));
+console.log(Url.parse('https://user:pass@sub.host.com:8080/p/a/t/h?query=string#hash'));
 // enum EventListenerName {
 //   hash = 'hashChange',
 //   html5 = 'popstate'
