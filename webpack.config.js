@@ -22,6 +22,9 @@ module.exports = {
     umdNamedDefine: true,
   },
   resolve: {
+    alias: {
+      'uDir': path.join(cwd, 'src/demo')
+    },
     extensions: [
       '.ts', '.js', '.json' // 少写 extensions 会引起 webpack-dev-server 强制使用 iframe 模式，否则会报错
     ]

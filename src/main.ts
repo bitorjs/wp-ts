@@ -1,8 +1,9 @@
 import * as DDD from './index';
 import * as Url from 'url';
+import * as s from 'uDir/index';
 
 console.log(process.argv)
-console.log(DDD)
+console.log(DDD, s)
 
 
 const xming = new DDD.Teacher("", 4)
